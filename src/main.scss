@@ -31,3 +31,7 @@ a.nav-right,
 .recent {
   display: none !important;
 }
+
+#head a.button {
+  color: var(--ls-primary-text-color);
+}

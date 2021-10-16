@@ -1,15 +1,15 @@
 .white-theme,
 html[data-theme="light"] {
-  --ct-primary-color: #3182ce;
-  --ct-secondary-color: #2b6baf;
-  --ct-warning-color: #ff7262;
-  --ct-success-color: #0dcf82;
-  --ct-highlight-color: #ffc600;
+  --ct-primary-color: #006adc;
+  --ct-secondary-color: #01254d;
+  --ct-warning-color: #f3b0a2;
+  --ct-success-color: #92ceac;
+  --ct-highlight-color: #f3ba63;
 
-  --ls-primary-background-color: #ffffff;
-  --ls-secondary-background-color: #f7fafc;
-  --ls-tertiary-background-color: #e9ecef;
-  --ls-quaternary-background-color: #dee2e6;
+  --ls-primary-background-color: #fcfcfc;
+  --ls-secondary-background-color: #f3f3f3;
+  --ls-tertiary-background-color: #ededed;
+  --ls-quaternary-background-color: #e8e8e8;
 
   --ls-border-color: var(--ls-tertiary-background-color);
 
@@ -18,8 +18,8 @@ html[data-theme="light"] {
   --color-level-4: #ced4da;
   --color-level-5: #adb5bd;
 
-  --ls-primary-text-color: rgb(40, 40, 40);
-  --ls-secondary-text-color: #161e2e;
+  --ls-primary-text-color: #171717;
+  --ls-secondary-text-color: #6f6f6f;
 
   --ct-bold-color: #000;
 
@@ -41,8 +41,8 @@ html[data-theme="light"] {
 
   --ls-icon-color: var(--ls-primary-text-color);
 
-  --ct-block-reference-background: rgba(16, 107, 163, 0.1);
-  --ct-block-reference-background-hover: rgba(16, 107, 163, 0.3);
+  --ct-block-reference-background: var(--ls-secondary-background-color);
+  --ct-block-reference-background-hover: var(--ls-tertiary-background-color);
 
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
 
