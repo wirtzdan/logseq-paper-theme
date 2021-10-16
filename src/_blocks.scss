@@ -46,11 +46,15 @@
 //   font-variant-numeric: tabular-nums;
 // }
 
-// .bullet-container .bullet {
-//   width: var(--ct-bullet-size);
-//   height: var(--ct-bullet-size);
-//   transform: scale(1.2);
-// }
+.bullet-container .bullet {
+  width: var(--ct-bullet-size);
+  height: var(--ct-bullet-size);
+  transform: scale(1.2);
+}
+
+.block-control svg {
+  color: var(--ct-block-arrow-color);
+}
 
 // .bullet-container.bullet-closed .bullet {
 //   background-color: var(--ls-primary-background-color);
@@ -59,10 +63,6 @@
 
 // a:hover > .bullet-container .bullet {
 //   opacity: 1;
-// }
-
-// .block-control svg {
-//   color: var(--ct-block-arrow-color);
 // }
 
 // .block-control:hover svg {

@@ -20,12 +20,15 @@
 // Custom code
 a.nav-left,
 a.nav-right,
-#search-button {
+#search-button,
+.cp__sidebar-help-btn {
   display: none;
 }
 
-#search-button {
-  display: none !important;
+// Border under heder
+.cp__header::after,
+.cp__right-sidebar-topbar::after {
+  display: none;
 }
 
 .recent {
@@ -34,4 +37,13 @@ a.nav-right,
 
 #head a.button {
   color: var(--ls-primary-text-color);
+}
+
+// Fix Left Sidebar Icon
+.is-electron.is-mac .cp__header {
+  padding-left: 0px;
+}
+
+.is-electron.is-mac.is-fullscreen .cp__header {
+  padding-left: 78px;
 }

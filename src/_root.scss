@@ -35,26 +35,12 @@
   }
 }
 
-@supports (
-  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
-) {
-  .cp__header,
-  .cp__right-sidebar-topbar,
-  .sidebar-item.content > div > div:first-of-type {
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    background-color: transparent;
-  }
-}
-
-@supports not (
-  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
-) {
-  .cp__header,
-  .cp__right-sidebar-topbar,
-  .sidebar-item.content > div > div:first-of-type {
-    background: var(--ct-header-bg-color);
-  }
+.cp__header,
+.cp__right-sidebar-topbar,
+.sidebar-item.content > div > div:first-of-type {
+  // -webkit-backdrop-filter: blur(20px);
+  // backdrop-filter: blur(20px);
+  background-color: transparent;
 }
 
 :not(.color-level) .color-level {
