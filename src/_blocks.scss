@@ -1,0 +1,108 @@
+@import "bullet_threading.scss";
+
+:root {
+  --ct-bullet-size: 6px;
+  --ct-block-max-width: calc(100% - 38px);
+}
+
+/* block reference */
+.block-ref {
+  font-size: inherit;
+  padding: 1px 5px 0;
+  border-radius: 2px;
+  background: var(--ct-block-reference-background);
+}
+
+.block-ref:hover {
+  background: var(--ct-block-reference-background-hover);
+}
+
+.block-ref:before {
+  content: "#";
+  color: var(--ls-active-primary-color);
+  font-size: 0.8em;
+  padding: 0 4px 0 0;
+}
+
+.block-ref .block-body {
+  display: inline-block;
+}
+
+.block-ref div {
+  display: inline;
+  padding: 0 0.2em;
+}
+
+.block-ref .block-ref {
+  padding: 0 0 0 0.2em;
+}
+
+.open-block-ref-link {
+  opacity: 1;
+  font-family: Asap;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.bullet-container .bullet {
+  width: var(--ct-bullet-size);
+  height: var(--ct-bullet-size);
+  transform: scale(1.2);
+}
+
+.bullet-container.bullet-closed .bullet {
+  background-color: var(--ls-primary-background-color);
+  box-shadow: 0 0 1px 2px var(--ls-block-bullet-border-color);
+}
+
+a:hover > .bullet-container .bullet {
+  opacity: 1;
+}
+
+.block-control svg {
+  color: var(--ct-block-arrow-color);
+}
+
+.block-control:hover svg {
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+// hovering block indicator
+.block-content-wrapper > div > .block-content {
+  & > span > span > :first-child {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 10px;
+      top: calc(50% - 5px);
+      left: -8px;
+      transform: scaleY(0.5);
+      transition: all 0.2s;
+      opacity: 0;
+      background: var(--ct-primary-color);
+      border-radius: 2px;
+    }
+  }
+
+  &:hover > span > span > :first-child::before {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Block oversize issue */
+.block-content-wrapper {
+  max-width: var(--ct-block-max-width);
+}
+
+.block-content-wrapper > div.flex-1 {
+  width: 100%;
+}
+
+.block-content .resize {
+  max-width: -webkit-fill-available;
+}

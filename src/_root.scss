@@ -1,0 +1,62 @@
+:root {
+  --ct-background: var(--ls-primary-background-color);
+  --ct-page-font-color: var(--ls-primary-text-color);
+}
+
+:root.is-mac.is-electron {
+  --ct-header-height: 48px;
+}
+
+::selection {
+  background: var(--ct-primary-color);
+  color: var(--ls-selection-color);
+}
+
+/* Some tweaks on making this theme a bit more compact on mobile.
+   Mobile cap is 640px */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  #main-content-container {
+    padding: 0;
+  }
+  .cp__sidebar-main-content > div {
+    padding: 1px 1em 1em 1em !important;
+    border: none;
+  }
+  a.title h1.title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  .custom-query {
+    padding: 0 1rem;
+  }
+}
+
+@supports (
+  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
+) {
+  .cp__header,
+  .cp__right-sidebar-topbar,
+  .sidebar-item.content > div > div:first-of-type {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+  }
+}
+
+@supports not (
+  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
+) {
+  .cp__header,
+  .cp__right-sidebar-topbar,
+  .sidebar-item.content > div > div:first-of-type {
+    background: var(--ct-header-bg-color);
+  }
+}
+
+:not(.color-level) .color-level {
+  box-shadow: 0 0 0 2px var(--color-level-2);
+}

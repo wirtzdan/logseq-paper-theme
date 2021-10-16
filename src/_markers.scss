@@ -1,0 +1,99 @@
+:root {
+  --ct-marker-border-radius: 4px;
+  --ct-task-done-text-decoration: none;
+  --ct-marker-size: 20px;
+  --ct-checkbox-color: var(--ls-active-primary-color);
+}
+
+/* Markers */
+.form-checkbox,
+.form-checkbox:focus {
+  border-radius: var(--ct-marker-border-radius);
+  border: 2px solid var(--ct-checkbox-color) !important;
+  background-color: transparent !important;
+  height: calc(var(--ct-marker-size) - 4px);
+  width: calc(var(--ct-marker-size) - 4px);
+  margin-top: -3px !important;
+}
+
+:is(.doing, .now) .form-checkbox,
+:is(.doing, .now) .form-checkbox:focus {
+  background-color: var(--ct-block-reference-background-hover) !important;
+}
+
+.waiting .form-checkbox,
+.waiting .form-checkbox:focus {
+  background-color: var(--ct-highlight-color) !important;
+}
+
+.form-checkbox:checked,
+.form-checkbox:checked:focus {
+  background-color: var(--ct-success-color) !important;
+  margin-right: 5px !important;
+}
+
+.done {
+  color: var(--ct-task-done-text-color);
+  text-decoration: var(--ct-task-done-text-decoration);
+}
+
+a[priority],
+a.priority {
+  font-size: 0px; /* Hide text */
+}
+
+a[priority="A"]::before,
+a.priority[href="#/page/A" i]:before {
+  content: "A";
+  background: var(--ct-warning-color);
+  color: #000;
+}
+
+a[priority="B"]::before,
+a.priority[href="#/page/B" i]:before {
+  content: "B";
+  background: var(--ct-highlight-color);
+  color: #000;
+}
+
+a[priority="C"]::before,
+a.priority[href="#/page/C" i]:before {
+  content: "C";
+  background: var(--ct-success-color);
+  color: #fff;
+}
+
+a.priority[href="#/page/A" i],
+[href="#/page/B" i],
+[href="#/page/C" i] {
+  display: inline-flex;
+  opacity: 1 !important;
+  height: var(--ct-marker-size);
+  width: var(--ct-marker-size);
+}
+
+a[priority]::before,
+a.priority::before {
+  border: 1px solid #eee;
+  border-radius: var(--ct-marker-border-radius);
+  font-size: 12px;
+  font-weight: 600;
+  height: var(--ct-marker-size);
+  width: var(--ct-marker-size);
+  line-height: 1.5;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ct-code-font-family);
+}
+
+a.tooltip-priority:first-of-type::before {
+  margin-left: 0.3em;
+  margin-top: 0.5em;
+}
+
+.block-marker {
+  font-family: var(--ct-code-font-family);
+  font-size: var(--ct-inline-code-font-size);
+}
