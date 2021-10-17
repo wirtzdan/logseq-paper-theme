@@ -8,11 +8,11 @@ The theme is build on top of the great [Logseq Dev Theme](https://github.com/pen
 
 ## Usage
 
-The easiest way to adopt this theme is to use jsDelivr CDN by adding the following line to your `custom.css`. You can also change the `@main` part to use the latest version.
+The easiest way to adopt this theme is to use jsDelivr CDN by adding the following line to your `custom.css`.
 
 ```css
 /* This must be the first line of the custom.css with other import rules */
-@import url("https://cdn.jsdelivr.net/gh/wirtzdan/logseq-paper-theme@main/custom.css");
+@import url("https://cdn.jsdelivr.net/gh/wirtzdan/logseq-paper-theme@master/custom.css");
 
 /* You can also add other styles below to override the default theme values */
 ```
