@@ -2,9 +2,12 @@
 html[data-theme="light"] {
   --ct-primary-color: #006adc;
   --ct-secondary-color: #01254d;
-  --ct-warning-color: #f3b0a2;
-  --ct-success-color: #92ceac;
-  --ct-highlight-color: #f3ba63;
+  --ct-warning-color: #e54d2e;
+  --ct-warning-color-text: white;
+  --ct-success-color: #46a857;
+  --ct-success-color-text: white;
+  --ct-highlight-color: #f4d909;
+  --ct-highlight-color-text: black;
 
   --ls-primary-background-color: #ffffff;
   --ls-secondary-background-color: #f8f8f8;

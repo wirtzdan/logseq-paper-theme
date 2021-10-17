@@ -1,20 +1,20 @@
 :root {
   --ct-marker-border-radius: 4px;
   --ct-task-done-text-decoration: line-through;
-  --ct-marker-size: 22px;
+  --ct-marker-size: 18px;
   --ct-checkbox-color: #dbdbdb;
 }
 
 /* Markers */
 .form-checkbox,
 .form-checkbox:focus {
-  border-radius: var(--ct-marker-border-radius);
-  // border: 2px solid var(--ct-checkbox-color) !important;
-  // background-color: transparent !important;
-  background-color: var(--ct-checkbox-color);
-  height: calc(var(--ct-marker-size) - 4px);
-  width: calc(var(--ct-marker-size) - 4px);
-  // margin-top: -3px !important;
+  border-radius: 100%;
+  border: 2px solid var(--ct-checkbox-color);
+  background-color: white !important;
+  // background-color: var(--ct-checkbox-color);
+  height: calc(var(--ct-marker-size) + 2px);
+  width: calc(var(--ct-marker-size) + 2px);
+  margin-top: -0px !important;
   z-index: 1;
   position: relative;
 }
@@ -23,17 +23,24 @@
   transform: unset;
 }
 
+// .block-marker {
+//   font-family: var(--ct-code-font-family);
+//   font-size: var(--ct-inline-code-font-size);
+// }
+
 .marker-switch {
-  opacity: 0.7;
+  opacity: 1;
   transition: 0.3s;
-  margin-left: -0.5em;
-  margin-right: 5px;
-  padding: 1px 6px 1px 6px;
+  margin-left: -1em;
+  margin-right: 4px;
+  height: var(--ct-marker-size);
+  padding: 1px 6px 1px 12px;
   border-radius: 0 4px 4px 0;
   font-weight: bold;
-  font-family: "Inter", sans-serif !important;
-  background: #ededed;
-  color: black;
+  // font-family: "Inter", sans-serif !important;
+  background: var(--ls-tertiary-background-color);
+  color: var(--ls-primary-text-color);
+  // transform: translateY(-1px);
 }
 
 :is(.doing, .now) .form-checkbox,
@@ -44,18 +51,21 @@
 .waiting .form-checkbox,
 .waiting .form-checkbox:focus {
   background-color: var(--ct-highlight-color) !important;
+  color: var(--ct-highlight-color-text) !important;
 }
 
 .form-checkbox:checked,
 .form-checkbox:checked:focus {
   background-color: var(--ct-success-color) !important;
   margin-right: 5px !important;
+  color: var(--ct-success-color-text) !important;
 }
 
 .done {
   opacity: 0.6;
   color: var(--ct-task-done-text-color);
   text-decoration: var(--ct-task-done-text-decoration);
+  border: none;
 }
 
 a[priority],
@@ -65,23 +75,23 @@ a.priority {
 
 a[priority="A"]::before,
 a.priority[href="#/page/A" i]:before {
-  content: "A";
-  background: var(--ct-warning-color);
-  color: #000;
+  content: "🟢";
+  background: var(--ct-success-color);
+  color: var(--ct-success-color-text);
 }
 
 a[priority="B"]::before,
 a.priority[href="#/page/B" i]:before {
-  content: "B";
+  content: "🟡";
   background: var(--ct-highlight-color);
-  color: #000;
+  color: var(--ct-highlight-color-text);
 }
 
 a[priority="C"]::before,
 a.priority[href="#/page/C" i]:before {
-  content: "C";
-  background: var(--ct-success-color);
-  color: #fff;
+  content: "🔴";
+  background: var(--ct-warning-color) !important;
+  color: var(--ct-warning-color-text) !important;
 }
 
 a.priority[href="#/page/A" i],
@@ -95,7 +105,7 @@ a.priority[href="#/page/A" i],
 
 a[priority]::before,
 a.priority::before {
-  border: 1px solid #eee;
+  border: none;
   border-radius: var(--ct-marker-border-radius);
   font-size: 12px;
   font-weight: 600;
@@ -112,9 +122,4 @@ a.priority::before {
 a.tooltip-priority:first-of-type::before {
   margin-left: 0.3em;
   margin-top: 0.5em;
-}
-
-.block-marker {
-  font-family: var(--ct-code-font-family);
-  font-size: var(--ct-inline-code-font-size);
 }
