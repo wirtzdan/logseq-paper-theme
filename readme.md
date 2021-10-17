@@ -1,6 +1,11 @@
-# Paper theme (Logseq)
+# Paper Theme
 
-The Logseq Paper theme is a minimal theme, where the page or journal container is elevated from the user interface. Therefore putting it front and center.
+<img src="./logo.png" align="right"
+     alt="Size Limit logo by Anton Lovchikov" width="120" height="178">
+
+The [Logseq](https://logseq.com/) Paper theme is a minimal theme, where the page and journal container is elevated from the user interface. Therefore putting it front and center for a distractionless writing experience.
+
+> **🚧 NOTE**:This is an early version of this theme. There are a lot of rough edges and a couple styling issues. If you find a bug, please open an issue by [clicking here](https://github.com/wirtzdan/logseq-paper-theme/issues/new).
 
 <img src="./demo.png" />
 
