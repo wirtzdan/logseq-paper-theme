@@ -1,23 +1,21 @@
 {
-  "name": "logseq-tango-theme",
-  "author": "wirtzdan",
-  "version": "0.5",
-  "description": "A custom theme for Logseq",
+  "name": "logseq-paper-theme",
+  "author": "@wirtzdan",
+  "version": "0.1",
+  "description": "A paper like Logseq theme",
   "logseq": {
     "themes": [
       {
-        "name": "tango",
+        "name": "Paper Theme",
         "url": "./custom.css",
-        "description": "A custom theme for Logseq"
+        "description": "A paper like Logseq theme"
       }
     ],
-    "id": "tango_theme",
+    "id": "wirtzdan_paper_theme",
     "icon": "./logo.png"
   },
   "scripts": {
-    "build:main": "yarn sass src/main.scss custom.css --no-source-map",
-    "build:bt": "yarn sass src/bullet_threading.scss bullet_threading.css --no-source-map",
-    "build": "yarn build:main && yarn build:bt"
+    "build": "yarn sass src/main.scss custom.css --no-source-map"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
