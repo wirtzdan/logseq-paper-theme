@@ -7,7 +7,7 @@ The [Logseq](https://logseq.com/) Paper theme is a minimal theme, where the page
 
 > **🚧 NOTE**:This is an early version of this theme. There are a lot of rough edges and a couple styling issues. If you find a bug, please open an issue by [clicking here](https://github.com/wirtzdan/logseq-paper-theme/issues/new).
 
-The theme is build on top of the great [Logseq Dev Theme](https://github.com/pengx17/logseq-dev-theme) by [Peng Xiao](https://github.com/pengx17) and inspired by the work of [Fabrizio Rinaldi](https://twitter.com/linuz90) with his [Bette Roam Research](https://github.com/linuz90/better-roam-research) theme.
+The theme is build on top of the great [Logseq Dev Theme](https://github.com/pengx17/logseq-dev-theme) by [Peng Xiao](https://github.com/pengx17) and inspired by the work of [Fabrizio Rinaldi](https://twitter.com/linuz90) with his [Better Roam Research](https://github.com/linuz90/better-roam-research) theme.
 
 ## Screenshot
 
