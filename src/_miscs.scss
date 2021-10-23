@@ -24,11 +24,18 @@ ol > li::marker {
 }
 
 /* Bold */
-b,
-strong {
-  color: var(--ct-bold-color);
-  font-weight: 600;
-}
+// b,
+// strong {
+//   color: var(--ct-bold-color);
+//   font-weight: 600;
+//   color: #262626;
+// }
+
+// mark b,
+// mark strong {
+//   color: var(--ct-bold-color);
+//   font-weight: 600;
+// }
 
 /* External links */
 .external-link,
@@ -42,16 +49,11 @@ strong {
 
 /* highlight */
 mark {
-  // background: transparent;
-  // padding: 0;
-  // color: inherit;
-  // font-size: inherit;
-  // text-decoration-style: solid;
-  // text-decoration: underline;
-  // text-decoration-color: var(--ct-highlight-color);
-  // text-decoration-thickness: 4px;
-  // text-underline-offset: -1px;
-  // text-decoration-skip-ink: none;
+  background: var(--ls-selection-background-color);
+  padding: 3px;
+  border-radius: 2px;
+  color: inherit;
+  font-size: inherit;
 }
 
 code,

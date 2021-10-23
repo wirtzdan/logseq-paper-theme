@@ -49,10 +49,12 @@ html[data-theme="light"] {
 
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
 
+  --ls-menu-hover-color: var(--ls-tertiary-background-color);
+
   --ls-selection-color: #fff;
 
   --ls-block-highlight-color: var(--ls-quaternary-background-color);
-  --ls-selection-background-color: rgba(255, 255, 0, 0.4);
+  --ls-selection-background-color: rgba(255, 255, 0, 0.3);
 
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
