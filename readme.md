@@ -19,7 +19,7 @@ The easiest way to adopt this theme is to use jsDelivr CDN by adding the followi
 
 ```css
 /* This must be the first line of the custom.css with other import rules */
-@import url("https://cdn.jsdelivr.net/gh/wirtzdan/logseq-paper-theme@master/custom.css");
+@import url("https://wirtzdan.github.io/logseq-paper-theme/custom.css");
 
 /* You can toggle these variables between "block" (Visible) and "none" (Hidden) to show or hide different elements of the UI */
 :root {
