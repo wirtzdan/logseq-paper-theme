@@ -12,27 +12,34 @@
 @import "graph.scss";
 @import "theme_dark.scss";
 @import "theme_light.scss";
+@import "SETTINGS.scss";
 
 :root {
   --ls-block-bullet-threading-width: 2px;
 }
 
 // Custom code
-a.nav-left,
-a.nav-right,
-#search-button,
 .cp__sidebar-help-btn {
-  display: none;
+  display: var(--display-help-button);
+}
+
+a.nav-left,
+a.nav-right {
+  display: var(--display-help-button);
+}
+
+#search-button {
+  display: var(--display-search-button);
+}
+
+.recent {
+  display: var(--display-recent-pages);
 }
 
 // Border under heder
 .cp__header::after,
 .cp__right-sidebar-topbar::after {
   display: none;
-}
-
-.recent {
-  display: none !important;
 }
 
 #head a.button {
@@ -46,4 +53,13 @@ a.nav-right,
 
 .is-electron.is-mac.is-fullscreen .cp__header {
   padding-left: 0px;
+}
+
+// Fix vertical lines
+.block-children {
+  transition: border-color 0.2s;
+}
+
+.block-children:focus-within {
+  border-color: transparent;
 }
