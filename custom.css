@@ -296,6 +296,7 @@ a.title h1.title {
 .ls-block :is(h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5) {
   font-family: var(--ct-page-title-font-family);
   font-weight: var(--ct-page-title-font-weight);
+  border-bottom: unset;
 }
 
 .ls-block .block-ref :is(h1, h2, h3, h4, h5) {
@@ -550,12 +551,6 @@ ol > li::marker {
 }
 
 /* Bold */
-b,
-strong {
-  color: var(--ct-bold-color);
-  font-weight: 600;
-}
-
 /* External links */
 .external-link,
 .external-link:hover {
@@ -567,6 +562,14 @@ strong {
 }
 
 /* highlight */
+mark {
+  background: var(--ls-selection-background-color);
+  padding: 3px;
+  border-radius: 2px;
+  color: inherit;
+  font-size: inherit;
+}
+
 code,
 kbd,
 pre,
@@ -659,7 +662,7 @@ progress::-webkit-progress-value {
 }
 
 .tippy-tooltip > .tippy-tooltip-content {
-  border: 2px solid #000;
+  border: px solid #000;
   border-radius: 8px;
   overflow: hidden;
   background: var(--ls-primary-background-color);
@@ -729,6 +732,10 @@ progress::-webkit-progress-value {
 
 .tippy-popper .add-button {
   display: none;
+}
+
+.ui__ac-group-name {
+  color: var(--ls-secondary-text-color) !important;
 }
 
 :root {
@@ -960,6 +967,7 @@ html[data-theme=dark] {
   --ct-block-reference-background-hover: var(--ls-tertiary-background-color);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
   --ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
+  --ls-menu-hover-color: var(--ls-secondary-background-color);
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: #272c35ee;
   --ls-selection-color: #000;
@@ -1008,9 +1016,10 @@ html[data-theme=light] {
   --ct-block-reference-background: var(--ls-secondary-background-color);
   --ct-block-reference-background-hover: var(--ls-tertiary-background-color);
   --ls-page-properties-background-color: var(--ls-tertiary-background-color);
+  --ls-menu-hover-color: var(--ls-tertiary-background-color);
   --ls-selection-color: #fff;
   --ls-block-highlight-color: var(--ls-quaternary-background-color);
-  --ls-selection-background-color: rgba(255, 255, 0, 0.4);
+  --ls-selection-background-color: rgba(255, 255, 0, 0.3);
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
 }

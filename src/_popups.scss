@@ -7,7 +7,7 @@
 }
 
 .tippy-tooltip > .tippy-tooltip-content {
-  border: 2px solid #000;
+  border: px solid #000;
   border-radius: 8px;
   overflow: hidden;
   background: var(--ls-primary-background-color);
@@ -78,4 +78,9 @@
 // Hide add button for page preview
 .tippy-popper .add-button {
   display: none;
+}
+
+// Group Labels in Popup
+.ui__ac-group-name {
+  color: var(--ls-secondary-text-color) !important;
 }
