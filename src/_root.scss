@@ -7,11 +7,6 @@
   --ct-header-height: 48px;
 }
 
-::selection {
-  background: var(--ct-primary-color);
-  color: var(--ls-selection-color);
-}
-
 /* Some tweaks on making this theme a bit more compact on mobile.
    Mobile cap is 640px */
 @media (max-width: 640px) {
@@ -35,12 +30,11 @@
   }
 }
 
-.cp__header,
-.cp__right-sidebar-topbar,
-.sidebar-item.content > div > div:first-of-type {
+.cp__right-sidebar-topbar {
   // -webkit-backdrop-filter: blur(20px);
   // backdrop-filter: blur(20px);
-  background-color: transparent;
+  background-color: var(--ls-primary-background-color);
+  margin-bottom: 8px;
 }
 
 :not(.color-level) .color-level {

@@ -19,8 +19,8 @@ html[data-theme="dark"] {
 
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
 
-  --ls-primary-text-color: rgb(235, 235, 235);
-  --ls-secondary-text-color: rgb(200, 200, 200);
+  --ls-primary-text-color: white;
+  --ls-secondary-text-color: #a0a0a0;
 
   --ct-bold-color: #fff;
 
@@ -53,6 +53,10 @@ html[data-theme="dark"] {
   --ct-header-bg-color: #272c35ee;
 
   --ls-selection-color: #000;
+
+  // Selection colors
+  --ls-block-highlight-color: var(--ls-quaternary-background-color);
+  --ls-selection-background-color: rgba(255, 255, 0, 0.3);
 }
 
 .dark-theme .image-resize {

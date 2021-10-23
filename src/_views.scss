@@ -54,8 +54,10 @@
 }
 
 .cp__right-sidebar .sidebar-item {
-  margin: var(--ct-sidebar-padding) 0;
+  // margin: var(--ct-sidebar-padding) 0;
   border-radius: 2px;
+  padding: 12px;
+  margin-bottom: 12px;
 }
 
 .cp__right-sidebar {
@@ -84,17 +86,17 @@
   color: var(--ls-primary-text-color);
 }
 
-.sidebar-item.content > div > div:first-of-type {
-  position: sticky;
-  top: 0;
-  padding: 1rem;
-  margin: -1rem;
-  z-index: 10;
-}
+// .sidebar-item.content > div > div:first-of-type {
+//   position: sticky;
+//   top: 0;
+//   padding: 1rem;
+//   margin: -1rem;
+//   z-index: 10;
+// }
 
-.sidebar-item.content > div > div:first-of-type + div {
-  margin-top: 1.5rem;
-}
+// .sidebar-item.content > div > div:first-of-type + div {
+//   margin-top: 1.5rem;
+// }
 
 .cp__right-sidebar-inner .resizer {
   background: var(--ct-sidebar-resizer-background);
@@ -118,4 +120,27 @@
 /* Journals */
 #journals .journal-item:first-child {
   margin-top: 0.5em;
+}
+
+.left-bar a,
+.left-sidebar-inner a {
+  color: var(--ls-secondary-text-color) !important;
+}
+
+.left-bar a:hover,
+.left-sidebar-inner a:hover {
+  color: var(--ls-primary-text-color) !important;
+}
+
+.cp__right-sidebar-settings a {
+  color: var(--ls-secondary-text-color) !important;
+}
+
+.cp__right-sidebar-settings a:hover {
+  color: var(--ls-primary-text-color) !important;
+}
+
+.cp__header a,
+.cp__header a:hover {
+  color: var(--ls-primary-text-color) !important;
 }
