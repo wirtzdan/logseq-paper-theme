@@ -147,3 +147,8 @@ progress::-webkit-progress-value {
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
   background: var(--ls-tertiary-background-color) !important;
 }
+
+#pdf-layout-container,
+#pdf-layout-container .textLayer {
+  background: var(--ls-primary-background-color) !important;
+}
