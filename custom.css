@@ -461,13 +461,13 @@ ol > li::marker {
 
 /* Bold */
 /* External links */
-.external-link,
-.external-link:hover {
-  color: var(--ls-external-link-color);
+.external-link {
+  color: var(--ct-bold-color);
+  border-bottom-color: var(--ls-external-link-color);
 }
 
 .external-link:hover {
-  opacity: 0.8;
+  color: var(--ls-external-link-color);
 }
 
 /* highlight */
@@ -770,8 +770,8 @@ html[data-theme=dark] #app-container::before {
 
 .dark-theme,
 html[data-theme=dark] {
-  --ct-primary-color: #90cdf4;
-  --ct-secondary-color: #63b3ed;
+  --ct-primary-color: #bfdbfe;
+  --ct-secondary-color: #e0f2fe;
   --ct-warning-color: #ff7262;
   --ct-success-color: #0dcf82;
   --ct-highlight-color: #ffc600;
@@ -789,7 +789,7 @@ html[data-theme=dark] {
   --ls-link-ref-text-hover-color: var(--ct-secondary-color);
   --ls-active-primary-color: var(--ct-primary-color);
   --ls-active-secondary-color: var(--ct-secondary-color);
-  --ls-external-link-color: var(--ct-secondary-color);
+  --ls-external-link-color: var(--ct-primary-color);
   --ls-guideline-color: var(--ls-tertiary-background-color);
   --ls-block-bullet-color: #f8f8f8;
   --ls-bullet-closed-color: var(--ls-secondary-text-color);
@@ -818,8 +818,8 @@ html[data-theme=dark] {
 
 .white-theme,
 html[data-theme=light] {
-  --ct-primary-color: #006adc;
-  --ct-secondary-color: #01254d;
+  --ct-primary-color: #3b82f6;
+  --ct-secondary-color: #1d4ed8;
   --ct-warning-color: #e54d2e;
   --ct-warning-color-text: white;
   --ct-success-color: #46a857;
@@ -842,7 +842,7 @@ html[data-theme=light] {
   --ls-link-ref-text-hover-color: var(--ct-secondary-color);
   --ls-active-primary-color: var(--ct-primary-color);
   --ls-active-secondary-color: var(--ct-secondary-color);
-  --ls-external-link-color: var(--ct-secondary-color);
+  --ls-external-link-color: var(--ct-primary-color);
   --ls-guideline-color: var(--ls-tertiary-background-color);
   --ls-block-bullet-color: #858585;
   --ls-bullet-closed-color: var(--ls-quaternary-text-color);
@@ -983,4 +983,8 @@ a.nav-right {
 
 .document-mode .editor-inner .h4, .document-mode .ls-block h4, .document-mode .editor-inner .h5, .document-mode .ls-block h5, .document-mode .editor-inner .h6, .document-mode .ls-block h6 {
   margin: 0.5rem 0 0 0;
+}
+
+.page-reference .bracket {
+  opacity: 0.5;
 }

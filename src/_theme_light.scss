@@ -1,7 +1,7 @@
 .white-theme,
 html[data-theme="light"] {
-  --ct-primary-color: #006adc;
-  --ct-secondary-color: #01254d;
+  --ct-primary-color: #3b82f6;
+  --ct-secondary-color: #1d4ed8;
   --ct-warning-color: #e54d2e;
   --ct-warning-color-text: white;
   --ct-success-color: #46a857;
@@ -33,7 +33,7 @@ html[data-theme="light"] {
 
   --ls-active-primary-color: var(--ct-primary-color);
   --ls-active-secondary-color: var(--ct-secondary-color);
-  --ls-external-link-color: var(--ct-secondary-color);
+  --ls-external-link-color: var(--ct-primary-color);
 
   --ls-guideline-color: var(--ls-tertiary-background-color);
   --ls-block-bullet-color: #858585;

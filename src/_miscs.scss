@@ -38,14 +38,19 @@ ol > li::marker {
 // }
 
 /* External links */
-.external-link,
+
+.external-link {
+  color: var(--ct-bold-color);
+  border-bottom-color: var(--ls-external-link-color);
+}
+
 .external-link:hover {
   color: var(--ls-external-link-color);
 }
 
-.external-link:hover {
-  opacity: 0.8;
-}
+// .external-link:hover {
+//   opacity: 0.8;
+// }
 
 /* highlight */
 mark {
