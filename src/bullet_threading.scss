@@ -1,113 +1,113 @@
-:root {
-  --ls-block-bullet-active-color: var(--ls-block-bullet-color);
-  --ls-block-bullet-threading-width: 1px;
-}
+// :root {
+//   --ls-block-bullet-active-color: var(--ls-block-bullet-color);
+//   --ls-block-bullet-threading-width: 1px;
+// }
 
-.block-control {
-  z-index: 1;
-}
+// .block-control {
+//   z-index: 1;
+// }
 
-.block-children {
-  border-left-width: var(--ls-block-bullet-threading-width);
-}
+// .block-children {
+//   border-left-width: var(--ls-block-bullet-threading-width);
+// }
 
-.block-content-wrapper {
-  position: relative;
-}
+// .block-content-wrapper {
+//   position: relative;
+// }
 
-.bullet-container {
-  height: 14px !important;
-  width: 14px !important;
-  position: relative;
-}
+// .bullet-container {
+//   height: 14px !important;
+//   width: 14px !important;
+//   position: relative;
+// }
 
-/* Block bullet path should only show in a nested block */
+// /* Block bullet path should only show in a nested block */
 
-.ls-block {
-  .bullet {
-    background-color: var(--ls-block-bullet-active-color);
-    box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
-  }
+// .ls-block {
+//   .bullet {
+//     background-color: var(--ls-block-bullet-active-color);
+//     box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
+//   }
 
-  div.items-center {
-    position: relative;
-    height: 26px !important;
-  }
+//   div.items-center {
+//     position: relative;
+//     height: 26px !important;
+//   }
 
-  /* Fix for headings like h1, h2 etc */
-  > .items-baseline {
-    align-items: initial;
-  }
+//   /* Fix for headings like h1, h2 etc */
+//   > .items-baseline {
+//     align-items: initial;
+//   }
 
-  &:not(:focus-within) .bullet {
-    background-color: var(--ls-block-bullet-color);
-    transform: scale(1);
-    box-shadow: none;
-  }
+//   &:not(:focus-within) .bullet {
+//     background-color: var(--ls-block-bullet-color);
+//     transform: scale(1);
+//     box-shadow: none;
+//   }
 
-  &:not(:focus-within) > .items-baseline {
-    align-items: baseline;
-  }
+//   &:not(:focus-within) > .items-baseline {
+//     align-items: baseline;
+//   }
 
-  /* Basic "curve" */
-  .ls-block > div > div.items-center::before {
-    pointer-events: none;
-    content: "";
-    left: calc(var(--ls-block-bullet-threading-width) * -1);
-    right: 6px;
-    top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
-    bottom: 50%;
-    /* shift left 1px for border */
-    position: absolute;
-    border-left: var(--ls-block-bullet-threading-width) solid transparent;
-    border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
-    border-bottom-left-radius: 10px;
-  }
+//   /* Basic "curve" */
+//   .ls-block > div > div.items-center::before {
+//     pointer-events: none;
+//     content: "";
+//     left: calc(var(--ls-block-bullet-threading-width) * -1);
+//     right: 6px;
+//     top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
+//     bottom: 50%;
+//     /* shift left 1px for border */
+//     position: absolute;
+//     border-left: var(--ls-block-bullet-threading-width) solid transparent;
+//     border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
+//     border-bottom-left-radius: 10px;
+//   }
 
-  .ls-block:focus-within > div > div.items-center::before {
-    border-color: var(--ls-block-bullet-active-color);
-  }
+//   .ls-block:focus-within > div > div.items-center::before {
+//     border-color: var(--ls-block-bullet-active-color);
+//   }
 
-  .block-children > .ls-block::before {
-    pointer-events: none;
-    content: "";
-    top: -1rem;
-    bottom: 0;
-    border-left: var(--ls-block-bullet-threading-width) solid transparent;
-    left: calc(var(--ls-block-bullet-threading-width) * -1);
-    position: absolute;
-  }
+//   .block-children > .ls-block::before {
+//     pointer-events: none;
+//     content: "";
+//     top: -1rem;
+//     bottom: 0;
+//     border-left: var(--ls-block-bullet-threading-width) solid transparent;
+//     left: calc(var(--ls-block-bullet-threading-width) * -1);
+//     position: absolute;
+//   }
 
-  .block-children:focus-within > .ls-block:not(:focus-within)::before {
-    border-color: var(--ls-block-bullet-active-color);
-  }
+//   .block-children:focus-within > .ls-block:not(:focus-within)::before {
+//     border-color: var(--ls-block-bullet-active-color);
+//   }
 
-  .block-children:focus-within > .ls-block:focus-within ~ .ls-block::before {
-    border-color: transparent;
-  }
+//   .block-children:focus-within > .ls-block:focus-within ~ .ls-block::before {
+//     border-color: transparent;
+//   }
 
-  /* Fix multi-line blocks with children */
-  &[haschild="true"] {
-    > div > .block-content-wrapper::before {
-      pointer-events: none;
-      content: "";
-      top: 12px;
-      bottom: 0;
-      left: -15px;
-      position: absolute;
-      border-left: var(--ls-block-bullet-threading-width) solid transparent;
-    }
+//   /* Fix multi-line blocks with children */
+//   &[haschild="true"] {
+//     > div > .block-content-wrapper::before {
+//       pointer-events: none;
+//       content: "";
+//       top: 12px;
+//       bottom: 0;
+//       left: -15px;
+//       position: absolute;
+//       border-left: var(--ls-block-bullet-threading-width) solid transparent;
+//     }
 
-    &:focus-within > div > .block-content-wrapper::before {
-      border-color: var(--ls-block-bullet-active-color);
-    }
-  }
-}
+//     &:focus-within > div > .block-content-wrapper::before {
+//       border-color: var(--ls-block-bullet-active-color);
+//     }
+//   }
+// }
 
-/* Disable for doc mode */
-.doc-mode div.items-center::before,
-.doc-mode div.items-center::after,
-.doc-mode .ls-block::before,
-.doc-mode .ls-block::after {
-  display: none;
-}
+// /* Disable for doc mode */
+// div.items-center::before,
+// div.items-center::after,
+// .ls-block::before,
+// .ls-block::after {
+//   display: none;
+// }
