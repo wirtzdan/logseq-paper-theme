@@ -1,6 +1,8 @@
 :root {
   --ct-background: var(--ls-primary-background-color);
   --ct-page-font-color: var(--ls-primary-text-color);
+  --ls-scrollbar-width: 20px;
+  --ls-right-sidebar-width: 25%;
 }
 
 :root.is-mac.is-electron {
@@ -38,7 +40,7 @@
 }
 
 :not(.color-level) .color-level {
-  box-shadow: 0 0 0 2px var(--color-level-2);
+  box-shadow: 0 0 0 1px var(--ls-border-color);
 }
 
 // Fix a issue introduced in 0.4.6

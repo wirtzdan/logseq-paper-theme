@@ -19,7 +19,8 @@ html[data-theme="dark"] {
 
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
 
-  --ls-primary-text-color: white;
+  // --ls-primary-text-color: white;
+  --ls-primary-text-color: #fafafa;
   --ls-secondary-text-color: #a0a0a0;
 
   --ct-bold-color: #fff;
@@ -59,6 +60,11 @@ html[data-theme="dark"] {
   // Selection colors
   --ls-block-highlight-color: var(--ls-quaternary-background-color);
   --ls-selection-background-color: rgba(255, 255, 0, 0.3);
+
+  // Styling scrollbar
+  --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-thumb-hover-color: var(--ls-quaternary-background-color);
 }
 
 .dark-theme .image-resize {

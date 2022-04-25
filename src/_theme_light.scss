@@ -58,4 +58,9 @@ html[data-theme="light"] {
 
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
+
+  // Styling scrollbar
+  --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-thumb-hover-color: var(--ls-quaternary-background-color);
 }

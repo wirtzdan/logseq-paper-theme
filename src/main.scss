@@ -47,13 +47,13 @@ a.nav-right {
 }
 
 // Fix Left Sidebar Icon
-.is-electron.is-mac .cp__header {
-  padding-left: 78px;
-}
+// .is-electron.is-mac .cp__header {
+//   padding-left: 78px;
+// }
 
-.is-electron.is-mac.is-fullscreen .cp__header {
-  padding-left: 0px;
-}
+// .is-electron.is-mac.is-fullscreen .cp__header {
+//   padding-left: 0px;
+// }
 
 // Fix vertical lines
 .block-children {
@@ -63,3 +63,64 @@ a.nav-right {
 .block-children:focus-within {
   border-color: transparent;
 }
+
+// Left sidebar won't move content
+
+@media (min-width: 640px) {
+  #main-container.is-left-sidebar-open {
+    padding-left: 16px;
+  }
+}
+
+@media (min-width: 640px) {
+  .ls-right-sidebar-open #main-container.is-left-sidebar-open {
+    padding-left: var(--ls-left-sidebar-width) !important;
+  }
+}
+
+// Padding for main container
+#main-container {
+  padding: 16px 16px 0 16px;
+}
+
+// custom scrollbar
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+:root {
+  --ls-scrollbar-foreground-color: 
+  --ls-scrollbar-thumb-hover-color: 
+  --ls-scrollbar-background-color: transparent:
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+// Better left border lines for blocks
+
+.block-children-left-border:hover {
+    background-color: var(--ls-quaternary-background-color);
+}
+
+.block-children-left-border {
+    width: 2px;
+    left: 0;
+}
+
+// Fix heading styling while editing
+
+.editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5.h6), .ls-block :is(h1,h2,h3,h4,h5,h6) {
+    border-bottom: unset;
+}
+
+.editor-inner .multiline-block:is(.h1,.h2,.h3,.h4,.h5,.h6)::first-line, .editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), .ls-block :is(h1,h2,h3,h4,h5,h6) {
+    font-weight: 800;
+}
+  
+
+

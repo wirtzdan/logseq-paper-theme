@@ -25,6 +25,8 @@ textarea {
 :root {
   --ct-background: var(--ls-primary-background-color);
   --ct-page-font-color: var(--ls-primary-text-color);
+  --ls-scrollbar-width: 20px;
+  --ls-right-sidebar-width: 25%;
 }
 
 :root.is-mac.is-electron {
@@ -62,7 +64,7 @@ textarea {
 }
 
 :not(.color-level) .color-level {
-  box-shadow: 0 0 0 2px var(--color-level-2);
+  box-shadow: 0 0 0 1px var(--ls-border-color);
 }
 
 .scrollbar-spacing {
@@ -78,7 +80,6 @@ textarea {
   padding-top: var(--ct-header-height);
   position: absolute;
   width: 100%;
-  overflow-x: hidden;
   background: var(--ls-secondary-background-color);
 }
 
@@ -88,15 +89,17 @@ textarea {
 
 #main-content-container {
   margin-top: var(--ct-header-height) !important;
-  border: 2px solid var(--ls-border-color);
+  border: 1px solid var(--ls-border-color);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   margin: 24px;
   border-radius: 8px;
   background: var(--ls-primary-background-color);
   width: auto;
   margin-left: auto;
   margin-right: auto;
-  min-width: 800px;
-  padding-top: 36px;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 18px;
 }
 
 .page {
@@ -113,7 +116,7 @@ textarea {
 
 /* Right side bar */
 .cp__right-sidebar-inner {
-  --ct-sidebar-padding: 2px;
+  --ct-sidebar-padding: 1px;
 }
 
 .cp__right-sidebar.is-open {
@@ -121,9 +124,11 @@ textarea {
 }
 
 .cp__right-sidebar .sidebar-item {
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 12px;
   margin-bottom: 12px;
+  margin-top: 2px;
+  margin-right: 6px;
 }
 
 .cp__right-sidebar {
@@ -349,106 +354,6 @@ a.title h1.title {
 }
 
 :root {
-  --ls-block-bullet-active-color: var(--ls-block-bullet-color);
-  --ls-block-bullet-threading-width: 1px;
-}
-
-.block-control {
-  z-index: 1;
-}
-
-.block-children {
-  border-left-width: var(--ls-block-bullet-threading-width);
-}
-
-.block-content-wrapper {
-  position: relative;
-}
-
-.bullet-container {
-  height: 14px !important;
-  width: 14px !important;
-  position: relative;
-}
-
-/* Block bullet path should only show in a nested block */
-.ls-block {
-  /* Fix for headings like h1, h2 etc */
-  /* Basic "curve" */
-  /* Fix multi-line blocks with children */
-}
-.ls-block .bullet {
-  background-color: var(--ls-block-bullet-active-color);
-  box-shadow: 0 0 0 1px var(--ls-block-bullet-active-color);
-}
-.ls-block div.items-center {
-  position: relative;
-  height: 26px !important;
-}
-.ls-block > .items-baseline {
-  align-items: initial;
-}
-.ls-block:not(:focus-within) .bullet {
-  background-color: var(--ls-block-bullet-color);
-  transform: scale(1);
-  box-shadow: none;
-}
-.ls-block:not(:focus-within) > .items-baseline {
-  align-items: baseline;
-}
-.ls-block .ls-block > div > div.items-center::before {
-  pointer-events: none;
-  content: "";
-  left: calc(var(--ls-block-bullet-threading-width) * -1);
-  right: 6px;
-  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
-  bottom: 50%;
-  /* shift left 1px for border */
-  position: absolute;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-  border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
-  border-bottom-left-radius: 10px;
-}
-.ls-block .ls-block:focus-within > div > div.items-center::before {
-  border-color: var(--ls-block-bullet-active-color);
-}
-.ls-block .block-children > .ls-block::before {
-  pointer-events: none;
-  content: "";
-  top: -1rem;
-  bottom: 0;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-  left: calc(var(--ls-block-bullet-threading-width) * -1);
-  position: absolute;
-}
-.ls-block .block-children:focus-within > .ls-block:not(:focus-within)::before {
-  border-color: var(--ls-block-bullet-active-color);
-}
-.ls-block .block-children:focus-within > .ls-block:focus-within ~ .ls-block::before {
-  border-color: transparent;
-}
-.ls-block[haschild=true] > div > .block-content-wrapper::before {
-  pointer-events: none;
-  content: "";
-  top: 12px;
-  bottom: 0;
-  left: -15px;
-  position: absolute;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-}
-.ls-block[haschild=true]:focus-within > div > .block-content-wrapper::before {
-  border-color: var(--ls-block-bullet-active-color);
-}
-
-/* Disable for doc mode */
-.doc-mode div.items-center::before,
-.doc-mode div.items-center::after,
-.doc-mode .ls-block::before,
-.doc-mode .ls-block::after {
-  display: none;
-}
-
-:root {
   --ct-bullet-size: 6px;
   --ct-block-max-width: calc(100% - 38px);
 }
@@ -624,6 +529,7 @@ a.tag:hover {
   width: fit-content;
   padding-right: 2rem;
   max-width: var(--ct-block-max-width);
+  border-radius: 4px;
 }
 
 .sidebar-item-list .page-properties,
@@ -664,17 +570,18 @@ progress::-webkit-progress-value {
 
 /* Popups */
 .tippy-tooltip {
-  padding: 0.5em 0;
   min-width: 100px;
-  color: var(--ct-page-font-color);
   -webkit-font-smoothing: auto;
+  transition-duration: 200ms;
+  margin-left: 60px;
 }
 
 .tippy-tooltip > .tippy-tooltip-content {
-  border: px solid #000;
+  border: 1px solid var(--ls-border-color);
   border-radius: 8px;
   overflow: hidden;
   background: var(--ls-primary-background-color);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .tippy-wrapper,
@@ -684,26 +591,11 @@ progress::-webkit-progress-value {
 }
 
 .tippy-tooltip-content > .tippy-wrapper {
-  padding: 0 !important;
-  width: fit-content !important;
-  max-width: 800px;
   background: var(--ls-primary-background-color);
 }
 
-.tippy-tooltip-content > .pr-3 {
-  padding-left: 0.75rem;
-}
-
-.tippy-tooltip-content > .tippy-wrapper.overflow-y-auto {
-  overflow: visible;
-  display: flex;
-  flex-flow: column;
-}
-.tippy-tooltip-content > .tippy-wrapper.overflow-y-auto > div:last-of-type {
-  overflow: auto;
-  height: -webkit-fill-available;
-  padding: 1.5em 1em 1em;
-  min-width: 450px;
+.tippy-wrapper {
+  padding-bottom: 32px !important;
 }
 
 .tippy-popper .arrow-regular {
@@ -711,92 +603,25 @@ progress::-webkit-progress-value {
   /* Hide the arrow */
 }
 
-/* FIXME: this is a hack to remove scroll passed to scroll bottom issue */
-.tippy-popper[style*="visibility: hidden"] {
-  display: none;
-}
-
 /* Page preview title */
-.tippy-wrapper > :is(div:first-child, h2:first-child, .block-parents) {
-  display: inline-flex;
-  align-items: center;
-  position: absolute;
-  left: -0.5em;
-  top: -0.75em;
-  z-index: 2;
-  padding: 2px 1em 2px 1em !important;
-  background: var(--ct-query-header-background);
-  white-space: nowrap;
-  font-family: var(--ct-page-title-font-family);
-  font-weight: 600;
-  color: var(--ct-query-header-color);
-  font-style: var(--ct-inline-code-font-style) !important;
-  border: 2px solid #000;
-  border-radius: 4px;
-}
-
-.tippy-wrapper > :is(div:first-child, h2:first-child, .block-parents) a {
-  color: var(--ct-query-header-color);
-}
-
-.tippy-popper .add-button {
-  display: none;
-}
-
-.ui__ac-group-name {
-  color: var(--ls-secondary-text-color) !important;
-}
-
 :root {
   --ct-query-header-color: var(--ls-primary-background-color);
   --ct-query-header-background: var(--ct-primary-color);
 }
 
+.sidebar-item .custom-query .block-control:hover {
+  background: var(--ls-secondary-background-color);
+}
+
+.custom-query .block-control:hover {
+  background: var(--ls-primary-background-color);
+}
+
+.custom-query .block-control {
+  z-index: 999;
+}
+
 /* query */
-.custom-query > div:first-child {
-  box-shadow: 0 0 0 2px var(--color-level-2);
-  background-color: var(--color-level-1);
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  position: relative;
-}
-
-.embed .custom-query > div:first-child {
-  background: var(--ls-tertiary-background-color);
-}
-
-.dsl-query .custom-query-title > .font-medium,
-:not(.dsl-query) > .custom-query .custom-query-title {
-  display: inline-block;
-  opacity: 1;
-  padding: 2px 10px !important;
-  background: var(--ct-query-header-background);
-  color: var(--ct-query-header-color);
-  font-family: var(--ct-code-font-family);
-  font-size: var(--ct-inline-code-font-size);
-  font-style: var(--ct-inline-code-font-style) !important;
-  border-radius: var(--ct-inline-code-border-radius);
-}
-
-:not(.dsl-query) > .custom-query .custom-query-title > .flex-row {
-  position: absolute;
-  left: 24px;
-  text-shadow: none;
-  font-family: inherit;
-  color: var(--ls-primary-text-color);
-  font-size: 0.875rem;
-  font-family: var(--ls-font-family);
-}
-
-.dsl-query > .custom-query .foldable-title .opacity-70 code {
-  background: none;
-  color: var(--ct-query-header-color);
-}
-
-.block-body > .custom-query .foldable-title .opacity-70 > * {
-  color: var(--ct-query-header-color);
-}
-
 :root {
   --ct-marker-border-radius: 4px;
   --ct-task-done-text-decoration: line-through;
@@ -956,7 +781,7 @@ html[data-theme=dark] {
   --ls-quaternary-background-color: #504f57;
   --ls-border-color: var(--ls-tertiary-background-color);
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
-  --ls-primary-text-color: white;
+  --ls-primary-text-color: #fafafa;
   --ls-secondary-text-color: #a0a0a0;
   --ct-bold-color: #fff;
   --ls-link-text-color: var(--ct-primary-color);
@@ -982,6 +807,9 @@ html[data-theme=dark] {
   --ls-selection-color: #000;
   --ls-block-highlight-color: var(--ls-quaternary-background-color);
   --ls-selection-background-color: rgba(255, 255, 0, 0.3);
+  --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-thumb-hover-color: var(--ls-quaternary-background-color);
 }
 
 .dark-theme .image-resize {
@@ -1031,10 +859,13 @@ html[data-theme=light] {
   --ls-selection-background-color: rgba(255, 255, 0, 0.3);
   /* Will be used if backdrop-filter not supported */
   --ct-header-bg-color: rgba(255, 255, 255, 0.9);
+  --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-thumb-hover-color: var(--ls-quaternary-background-color);
 }
 
 :root {
-  --display-search-button: block;
+  --display-search-button: flex;
   --display-arrow-navigation: block;
   --display-help-button: block;
   --display-recent-pages: block;
@@ -1070,18 +901,57 @@ a.nav-right {
   color: var(--ls-primary-text-color);
 }
 
-.is-electron.is-mac .cp__header {
-  padding-left: 78px;
-}
-
-.is-electron.is-mac.is-fullscreen .cp__header {
-  padding-left: 0px;
-}
-
 .block-children {
   transition: border-color 0.2s;
 }
 
 .block-children:focus-within {
   border-color: transparent;
+}
+
+@media (min-width: 640px) {
+  #main-container.is-left-sidebar-open {
+    padding-left: 16px;
+  }
+}
+@media (min-width: 640px) {
+  .ls-right-sidebar-open #main-container.is-left-sidebar-open {
+    padding-left: var(--ls-left-sidebar-width) !important;
+  }
+}
+#main-container {
+  padding: 16px 16px 0 16px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+:root {
+  --ls-scrollbar-foreground-color:
+  --ls-scrollbar-thumb-hover-color:
+  --ls-scrollbar-background-color: transparent: ;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.block-children-left-border:hover {
+  background-color: var(--ls-quaternary-background-color);
+}
+
+.block-children-left-border {
+  width: 2px;
+  left: 0;
+}
+
+.editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5.h6), .ls-block :is(h1, h2, h3, h4, h5, h6) {
+  border-bottom: unset;
+}
+
+.editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6)::first-line, .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6), .ls-block :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 800;
 }
