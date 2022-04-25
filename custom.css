@@ -834,7 +834,7 @@ html[data-theme=light] {
   --ls-table-tr-even-background-color: var(--ls-secondary-background-color);
   --color-level-4: #ced4da;
   --color-level-5: #adb5bd;
-  --ls-primary-text-color: #181818;
+  --ls-primary-text-color: #3f3f46;
   --ls-secondary-text-color: #6f6f6f;
   --ct-bold-color: #000;
   --ls-link-text-color: var(--ct-primary-color);
@@ -906,7 +906,7 @@ a.nav-right {
 }
 
 .block-children:focus-within {
-  border-color: transparent;
+  border-color: var(--ls-tertiary-background-color);
 }
 
 @media (min-width: 640px) {
@@ -943,6 +943,10 @@ a.nav-right {
   background-color: var(--ls-quaternary-background-color);
 }
 
+.block-children:focus-within {
+  border-color: var(--ls-quaternary-background-color);
+}
+
 .block-children-left-border {
   width: 2px;
   left: 0;
@@ -954,4 +958,29 @@ a.nav-right {
 
 .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6)::first-line, .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6), .ls-block :is(h1, h2, h3, h4, h5, h6) {
   font-weight: 800;
+}
+
+.editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6), .ls-block :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.document-mode .ls-block {
+  margin-bottom: 0.5rem;
+}
+
+.document-mode .bullet-container.bullet-closed {
+  background-color: transparent;
+}
+
+.document-mode .editor-inner .h1, .document-mode .ls-block h1 {
+  margin: 1.5rem 0 0 0;
+}
+
+.document-mode .editor-inner .h2, .document-mode .ls-block h2, .document-mode .editor-inner .h3, .document-mode .ls-block h3 {
+  margin: 1rem 0 0 0;
+}
+
+.document-mode .editor-inner .h4, .document-mode .ls-block h4, .document-mode .editor-inner .h5, .document-mode .ls-block h5, .document-mode .editor-inner .h6, .document-mode .ls-block h6 {
+  margin: 0.5rem 0 0 0;
 }

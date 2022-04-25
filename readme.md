@@ -5,7 +5,7 @@
 
 The [Logseq](https://logseq.com/) Paper theme is a minimal theme, where the page and journal container is elevated from the user interface. Therefore putting it front and center for a distractionless writing experience.
 
-> **🚧 NOTE**:This is an early version of this theme. There are a lot of rough edges and a couple styling issues. If you find a bug, please open an issue by [clicking here](https://github.com/wirtzdan/logseq-paper-theme/issues/new).
+> If you like this template, consider [buying me a coffee](https://www.buymeacoffee.com/wirtzdan) :)
 
 The theme is build on top of the great [Logseq Dev Theme](https://github.com/pengx17/logseq-dev-theme) by [Peng Xiao](https://github.com/pengx17) and inspired by the work of [Fabrizio Rinaldi](https://twitter.com/linuz90) with his [Better Roam Research](https://github.com/linuz90/better-roam-research) theme.
 
@@ -33,3 +33,5 @@ The easiest way to adopt this theme is to use jsDelivr CDN by adding the followi
 ```
 
 Alternatively, you can download this repo and load it as a Logseq Theme Plugin.
+
+> **🚧 Something doesn't work?**:If you find a bug, please open an issue by [clicking here](https://github.com/wirtzdan/logseq-paper-theme/issues/new).

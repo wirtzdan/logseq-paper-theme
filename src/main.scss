@@ -61,7 +61,7 @@ a.nav-right {
 }
 
 .block-children:focus-within {
-  border-color: transparent;
+  border-color: var(--ls-tertiary-background-color);
 }
 
 // Left sidebar won't move content
@@ -107,6 +107,10 @@ a.nav-right {
     background-color: var(--ls-quaternary-background-color);
 }
 
+.block-children:focus-within {
+  border-color: var(--ls-quaternary-background-color);
+}
+
 .block-children-left-border {
     width: 2px;
     left: 0;
@@ -121,6 +125,36 @@ a.nav-right {
 .editor-inner .multiline-block:is(.h1,.h2,.h3,.h4,.h5,.h6)::first-line, .editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), .ls-block :is(h1,h2,h3,h4,h5,h6) {
     font-weight: 800;
 }
-  
+
+// Remove maring-top from headers
+
+.editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), .ls-block :is(h1,h2,h3,h4,h5,h6) {
+    margin: 0;
+    line-height: 1.25;
+}
+
+// Document Mode
+
+.document-mode .ls-block {
+    margin-bottom: 0.5rem;
+}
+
+.document-mode .bullet-container.bullet-closed {
+  background-color:transparent;
+}
+
+.document-mode .editor-inner .h1, .document-mode .ls-block h1{
+    margin: 1.5rem 0 0 0;
+}
+
+.document-mode .editor-inner .h2, .document-mode .ls-block h2, .document-mode .editor-inner .h3, .document-mode .ls-block h3  {
+    margin: 1rem 0 0 0;
+}
+
+.document-mode .editor-inner .h4, .document-mode .ls-block h4, .document-mode .editor-inner .h5, .document-mode .ls-block h5, .document-mode .editor-inner .h6, .document-mode .ls-block h6 {
+    margin: 0.5rem 0 0 0;
+}
+
+
 
 
