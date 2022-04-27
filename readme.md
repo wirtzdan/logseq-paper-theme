@@ -1,7 +1,6 @@
 # Paper Theme
 
-<img src="./logo.png" align="right"
-     alt="Size Limit logo by Anton Lovchikov" width="120" height="120">
+<img src="./logo.png" align="right" width="120" height="120">
 
 The [Logseq](https://logseq.com/) Paper theme is a minimal theme, where the page and journal container is elevated from the user interface. Therefore putting it front and center for a distractionless writing experience.
 
@@ -21,12 +20,12 @@ The easiest way to adopt this theme is to use jsDelivr CDN by adding the followi
 /* This must be the first line of the custom.css with other import rules */
 @import url("https://wirtzdan.github.io/logseq-paper-theme/custom.css");
 
-/* You can toggle these variables between "block" (Visible) and "none" (Hidden) to show or hide different elements of the UI */
+/* Add these variables to your custom.css if you want to hide these page elements in the UI. Remove them to make them visible again. */
 :root {
-  --display-recent-pages: block;
-  --display-search-button: block;
-  --display-arrow-navigation: block;
-  --display-help-button: block;
+  --display-recent-pages: none;
+  --display-search-button: none;
+  --display-arrow-navigation: none;
+  --display-help-button: none;
 }
 
 /* You can also add other styles below to override the default theme values */
