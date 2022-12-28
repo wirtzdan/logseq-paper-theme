@@ -87,6 +87,10 @@ textarea {
   width: 0px;
 }
 
+.ls-wide-mode #main-content-container {
+  max-width: var(--ls-main-content-max-width-wide);
+}
+
 #main-content-container {
   margin-top: var(--ct-header-height) !important;
   border: 1px solid var(--ls-border-color);
@@ -98,7 +102,7 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 800px;
+  max-width: var(--ls-main-content-max-width);
   padding-top: 18px;
 }
 
