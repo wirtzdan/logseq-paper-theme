@@ -915,7 +915,7 @@ a.nav-right {
   }
 }
 @media (min-width: 640px) {
-  .ls-right-sidebar-open #main-container.is-left-sidebar-open {
+  .ls-left-sidebar-open #main-container.is-left-sidebar-open {
     padding-left: var(--ls-left-sidebar-width) !important;
   }
 }
