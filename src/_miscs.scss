@@ -209,3 +209,9 @@ progress::-webkit-progress-value {
   display: block;
   font-style: normal;
 }
+
+/* hide scrollbars */
+/* Maybe better to this only when you scroll */
+::-webkit-scrollbar {
+  display: none;
+}
