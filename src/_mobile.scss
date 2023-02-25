@@ -1,0 +1,49 @@
+html.is-ios {
+  font-size: 1.125em;
+}
+
+html.is-ios .cp__header {
+  height: calc(
+    var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding)
+  ) !important;
+  border-bottom: 1px solid var(--ls-border-color);
+  background-color: var(--ls-secondary-background-color);
+}
+
+html.is-ios #main-content-container {
+  padding-top: calc(
+    var(--ls-headbar-height) + var(--ls-headbar-inner-top-padding)
+  ) !important;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+  padding: 16px 10px 16px 10px;
+  margin-top: 16px;
+}
+
+html.is-ios #main-container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+html.is-ios .cp__footer {
+  border-top: 1px solid var(--ls-border-color);
+  background-color: var(--ls-secondary-background-color);
+}
+
+html.is-ios .cp__footer .bottom-action {
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+html.is-ios.dark .cp__footer {
+  background-color: var(--ls-primary-background-color);
+}
+
+html.is-ios.dark .cp__header {
+  background-color: var(--ls-primary-background-color);
+}
+
+html.is-ios.dark #main-content-container {
+  background-color: var(--ls-secondary-background-color);
+}
