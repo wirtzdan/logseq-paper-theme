@@ -145,6 +145,10 @@ a.title h1.title {
   content: "h5";
 }
 
+.slides .ls-block :is(h1, h2, h3, h4, h5)::after {
+  display: none;
+}
+
 .ls-block :is(h3, h4, h5) {
   margin: 0.3em 0 0;
 }
