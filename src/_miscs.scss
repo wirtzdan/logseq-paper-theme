@@ -154,7 +154,58 @@ progress::-webkit-progress-value {
   background: var(--ls-tertiary-background-color) !important;
 }
 
+.cm-s-solarized.cm-s-light {
+  background-color: white;
+  border: 1px solid var(--ls-border-color);
+  border-radius: 4px;
+  color: #657b83;
+  text-shadow: none;
+}
+
 #pdf-layout-container,
 #pdf-layout-container .textLayer {
   background: var(--ls-primary-background-color) !important;
+}
+
+// Media Timestamps
+.kef-media-ts-ts,
+.youtube-timestamp {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-level-2);
+  box-shadow: 0 0 0 1px var(--ls-border-color) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 2px 0px 4px;
+  font-size: 14px;
+  color: var(--ls-secondary-text-color);
+  width: fit-content;
+}
+
+.key-media-ts-ts:hover,
+.youtube-timestamp:hover {
+  color: var(--ls-primary-text-color) !important;
+  background-color: var(--color-level-3) !important;
+}
+
+.kef-media-ts-ts svg {
+  color: var(--ls-secondary-text-color);
+  transform: scale(0.8);
+}
+
+// Banner scaling
+#banner {
+  transform: scale(1.2);
+  margin-bottom: 24px;
+}
+
+// Search Border radius
+#search-in-page {
+  border-radius: var(--ls-border-radius-low);
+}
+
+.block-ref {
+  display: block;
+  font-style: normal;
 }
